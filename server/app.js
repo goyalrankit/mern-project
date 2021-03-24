@@ -1,14 +1,30 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 
+
+
+// DB CONNECTION
+const DB = "mongodb+srv://rankit:goyal@cluster0.ksihu.mongodb.net/project?retryWrites=true&w=majority";
+
+mongoose.connect(DB,
+    {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+    }).then(() =>{
+         console.log("Connected");
+    }).catch( ()=> console.log("Not Connected"))
+
+
+    
+// MIDDLEWARE
 const middleware = (req,res,next) =>
 {
     console.log("This is middleware");
     next();
 }
 
-
-
+// ROUTES
 app.get('/',(req,res)=>{
     res.send("Hello, this is tutorial 1");
 })
