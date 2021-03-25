@@ -8,3 +8,13 @@
     Connectivity with Mongo DB
 # DAY 4 
     Added Schema / Interface
+# DAY 5 
+    Added Routes for different Pages
+    Tested Post method, console JSON result
+# DAY 6 
+
+# DAY 7 
+
+# DAY 8
+
+    

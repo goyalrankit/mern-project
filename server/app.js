@@ -5,11 +5,16 @@ const User = require('./../models/userSchema');
 
 
 
-
-
 // DB CONNECTION
 const DB = "mongodb+srv://rankit:goyal@cluster0.ksihu.mongodb.net/project?retryWrites=true&w=majority";
 
+//  GET JSON values
+app.use(express.json());
+
+// ROUTEs
+app.use(require('./../Routes/auth'));
+
+// Connnecting To DB
 mongoose.connect(DB,
     {
         useUnifiedTopology: true,
