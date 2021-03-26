@@ -31,6 +31,8 @@
 # DAY 9
     Hashing the Password and saving to DB using Bcrypt
 # DAY 10
+    Check Hash Password and Email 
+    Implementing Login Functionality
 
 # DAY 11
 

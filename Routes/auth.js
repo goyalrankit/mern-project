@@ -2,6 +2,8 @@ const express = require('express');
 const routes = express.Router();
 require('./../database/db');
 const User = require('./../models/userSchema');
+const bcrypt = require('bcryptjs');
+
 
 // GET
 routes.get('/', (req,res) =>{
@@ -56,20 +58,26 @@ routes.post('/register',async (req,res) =>{
                 return res.status(422).json( {message:"One or more field is Empty"});
             }
 
-
             const userDetails = await User.findOne( { email: email} );
 
-            if( !userDetails )
+            if(userDetails)
             {
-                res.status(400).json( {message: "Invalid Credentials"} )
+                // Checking the entered password and db password are same or not
+                const verfiyDetails = await bcrypt.compare(password,userDetails.password);
+
+                // If not same 
+                if( !verfiyDetails )
+                {
+                    res.status(400).json( {message: "Invalid Credentials"} )
+                }else
+                {
+                    console.log(userDetails);
+                    res.status(200).json( {message: "User Succefully login "} )
+                }
             }else
             {
-                console.log(userDetails);
-                res.status(200).json( {message: "User Succefully login "} )
+                res.status(400).json( {message: "Invalid Credentials"} )
             }
-
-
-
         } catch (error) {
             console.log(error);
         }
