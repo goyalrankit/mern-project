@@ -15,9 +15,12 @@
     Added the validation and error on login using Postman   
     Checking if email is already present or not
     Inserted the Data in Mongo Db
+    Using promises
 
 # DAY 7 
-    Async and await method implementations
+    Using Async and await method 
+    Shorter code and quick implementation,
+    doing same work as in day6 but with async and await 
 
 # DAY 8
 
