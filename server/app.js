@@ -2,27 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const User = require('./../models/userSchema');
+require('./../database/db');
 
 
-
-// DB CONNECTION
-const DB = "mongodb+srv://rankit:goyal@cluster0.ksihu.mongodb.net/project?retryWrites=true&w=majority";
 
 //  GET JSON values
 app.use(express.json());
 
 // ROUTEs
 app.use(require('./../Routes/auth'));
-
-// Connnecting To DB
-mongoose.connect(DB,
-    {
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
-    }).then(() =>{
-         console.log("Connected");
-    }).catch( ()=> console.log("Not Connected"))
-
 
     
 // MIDDLEWARE
