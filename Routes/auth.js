@@ -44,6 +44,35 @@ routes.post('/register',async (req,res) =>{
 });
 
 
+// LOGIN Route
 
+    routes.post('/signin', async (req,res) =>{
+
+        try {
+            const { email , password} = req.body;
+
+            if( !email || !password)
+            {
+                return res.status(422).json( {message:"One or more field is Empty"});
+            }
+
+
+            const userDetails = await User.findOne( { email: email} );
+
+            if( !userDetails )
+            {
+                res.status(400).json( {message: "Invalid Credentials"} )
+            }else
+            {
+                console.log(userDetails);
+                res.status(200).json( {message: "User Succefully login "} )
+            }
+
+
+
+        } catch (error) {
+            console.log(error);
+        }
+    })
 
 module.exports = routes;
