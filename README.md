@@ -12,16 +12,20 @@
     Added Routes for different Pages
     Tested Post method, console JSON result
 # DAY 6 
+    Register/ SIGN UP 
     Added the validation and error on login using Postman   
     Checking if email is already present or not
     Inserted the Data in Mongo Db
     Using promises
 
 # DAY 7 
+    Register/ SIGN UP 
     Using Async and await method 
     Shorter code and quick implementation,
     doing same work as in day6 but with async and await 
 
 # DAY 8
-
+    Login/ SIGN IN
+    Using Async and await method via Postman
+    Sigin user using Email and Password verification 
     
