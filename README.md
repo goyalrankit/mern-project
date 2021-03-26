@@ -12,6 +12,9 @@
     Added Routes for different Pages
     Tested Post method, console JSON result
 # DAY 6 
+    Added the validation and error on login using Postman   
+    Checking if email is already present or not
+    Inserted the Data in Mongo Db
 
 # DAY 7 
 
