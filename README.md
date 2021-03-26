@@ -28,4 +28,13 @@
     Login/ SIGN IN
     Using Async and await method via Postman
     Sigin user using Email and Password verification 
+# DAY 9
+    Hashing the Password and saving to DB using Bcrypt
+# DAY 10
+
+# DAY 11
+
+# DAY 12
+
+# DAY 13
     
