@@ -29,12 +29,15 @@
     Using Async and await method via Postman
     Sigin user using Email and Password verification 
 # DAY 9
-    Hashing the Password and saving to DB using Bcrypt
+    Hashing the Password 
+    Saving hash password to MongoDB using Bcrypt
 # DAY 10
     Check Hash Password and Email 
     Implementing Login Functionality
-
 # DAY 11
+     User Authentication Using JWT 
+     Generate JWT Token
+     Store JWT Token In MongoDB
 
 # DAY 12
 

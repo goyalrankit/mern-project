@@ -65,6 +65,10 @@ routes.post('/register',async (req,res) =>{
                 // Checking the entered password and db password are same or not
                 const verfiyDetails = await bcrypt.compare(password,userDetails.password);
 
+                // Adding Token
+                const token = await userDetails.generateJsonToken();
+                console.log(token);
+
                 // If not same 
                 if( !verfiyDetails )
                 {

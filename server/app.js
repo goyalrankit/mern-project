@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const app = express();
 const User = require('./../models/userSchema');
 require('./../database/db');
-
-
+const dotenv = require('dotenv');
+dotenv.config({path:'./../config.env'});
 
 //  GET JSON values
 app.use(express.json());
